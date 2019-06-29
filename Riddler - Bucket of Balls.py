@@ -7,7 +7,7 @@ maxWins = 0
 for Bucket1 in range(1,51):
     Bucket2 = 100-Bucket1
 
-    #Set up Ball Distrubution
+    #Set up Ball Distrubutions per Bucket Size
     for Bucket1Blue in range(0,Bucket1+1):
         Bucket1Red = Bucket1 - Bucket1Blue
         Bucket2Blue = 50 - Bucket1Blue
@@ -26,14 +26,7 @@ for Bucket1 in range(1,51):
                 if BallPick > Bucket2Blue:
                     wins += 1
           
-        if wins > maxWins:
-            maxWins = wins
-            winningCombo = [Bucket1, Bucket1Blue,Bucket1Red,Bucket2,Bucket2Blue,Bucket2Red,wins]
-            print winningCombo
-            
         print str(Bucket1)+','+str(Bucket1Blue)+','+str(Bucket1Red)+','+str(Bucket2)+','+str(Bucket2Blue)+','+str(Bucket2Red)+','+str(wins)
-
-        
 
         file.write(str(Bucket1)+','+str(Bucket1Blue)+','+str(Bucket1Red)+','+str(Bucket2)+','+str(Bucket2Blue)+','+str(Bucket2Red)+','+str(wins)+'\n')
 
